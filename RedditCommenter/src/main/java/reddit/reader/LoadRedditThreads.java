@@ -42,8 +42,8 @@ public class LoadRedditThreads {
 	 */
 	public static void main(String[] args) throws MalformedURLException{
 		
-		mongo = new MongoClient("localhost", 27017);
-		db = mongo.getDatabase("RedditDB");
+		mongo = new MongoClient(System.getProperty("mongo.address"), 
+				Integer.valueOf(System.getProperty("mongo.port")));		db = mongo.getDatabase("RedditDB");
 		threads = db.getCollection("threads");
 		comments = db.getCollection("comments");
 		
