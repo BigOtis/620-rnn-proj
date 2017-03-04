@@ -1,5 +1,6 @@
 package reddit.reader;
-import java.net.MalformedURLException;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.List;
 
 import org.bson.Document;
@@ -31,7 +32,7 @@ public class LoadRedditThreads {
 												 "politicaldiscussion", "tellmeafact"};	
 	
 	// Setup mongodb connection
-	static 	MongoClient mongo;
+	static MongoClient mongo;
 	static MongoDatabase db;
 	static MongoCollection<Document> threads;
 	static MongoCollection<Document> comments;
@@ -40,8 +41,9 @@ public class LoadRedditThreads {
 	 * Loops through the subreddits specified and
 	 * adds them to the local MongoDB
 	 */
-	public static void main(String[] args) throws MalformedURLException{
+	public static void main(String[] args) throws IOException{
 		
+        System.getProperties().load(new FileInputStream("mongo.properties"));
 		mongo = new MongoClient(System.getProperty("mongo.address"), 
 				Integer.valueOf(System.getProperty("mongo.port")));		db = mongo.getDatabase("RedditDB");
 		threads = db.getCollection("threads");
@@ -95,13 +97,16 @@ public class LoadRedditThreads {
 		String author = comment.getAuthor();
 		String text = comment.getBody();
 		Integer score = comment.getScore();
+		Long createdDate = comment.getCreated();
 		
 		Document commentDoc = new Document()
 				.append("id", id)
 				.append("author", author)
 				.append("text", text)
+				.append("createdDate", createdDate)
 				.append("score", score)
 				.append("threadId", threadId);
+		
 		
 		comments.insertOne(commentDoc);
 	}
