@@ -45,7 +45,8 @@ public class LoadRedditThreads {
 		
         System.getProperties().load(new FileInputStream("mongo.properties"));
 		mongo = new MongoClient(System.getProperty("mongo.address"), 
-				Integer.valueOf(System.getProperty("mongo.port")));		db = mongo.getDatabase("RedditDB");
+				Integer.valueOf(System.getProperty("mongo.port")));		
+		db = mongo.getDatabase("RedditDB");
 		threads = db.getCollection("threads");
 		comments = db.getCollection("comments");
 		
