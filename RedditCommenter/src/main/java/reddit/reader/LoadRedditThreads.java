@@ -28,8 +28,10 @@ import ga.dryco.redditjerk.wrappers.Subreddit;
 public class LoadRedditThreads {
 	
 	// Subreddits we want to load in
-	static String[] subredStrings = new String[]{"westworld", "roastme", "funny","lifeofnorman",
-												 "politicaldiscussion", "tellmeafact"};	
+	static String[] subredStrings = new String[]{//"westworld", "roastme", "funny",
+												"lifeofnorman",
+												 //"politicaldiscussion", "tellmeafact"
+												 };	
 	
 	// Setup mongodb connection
 	static MongoClient mongo;
@@ -57,13 +59,13 @@ public class LoadRedditThreads {
 		for(String subredname : subredStrings){
 			
 			System.out.println("*************************************************************");
-			System.out.println("Gathering top 100 posts for subreddit: " + subredname + "...");
+			System.out.println("Gathering top 1000 posts for subreddit: " + subredname + "...");
 			System.out.println("*************************************************************");
 
 			Subreddit subred = red.getSubreddit(subredname);
-			List<Link> links = subred.getTop(100, FromPast.YEAR);
+			List<Link> links = subred.getTop(1000, FromPast.YEAR);
 			
-			// Go through the top 100 threads from the past year
+			// Go through the top threads from the past year
 			for(Link link : links){
 				
 				// Some info needed for comments
@@ -95,6 +97,10 @@ public class LoadRedditThreads {
 	public static void addComment(Comment comment, String threadId){
 		
 		String id = comment.getId();
+		if(commentExists(id)){
+			return;
+		}
+		
 		String author = comment.getAuthor();
 		String text = comment.getBody();
 		Integer score = comment.getScore();
@@ -119,6 +125,10 @@ public class LoadRedditThreads {
 	public static void addThread(Link link, String subreddit){
 		
 		String threadID = link.getId();
+		if(threadExists(threadID)){
+			return;
+		}
+		
 		String threadTitle = link.getTitle();
 		String threadText = link.getSelftext();
 		String threadLinkURL = link.getUrl();
@@ -141,5 +151,17 @@ public class LoadRedditThreads {
 				.append("numComments", numComments);	
 		
 		threads.insertOne(threadDoc);
+	}
+	
+	public static boolean threadExists(String id){
+		
+		Document query = new Document("id", id);
+		return threads.find(query).first() != null;
+	}
+	
+	public static boolean commentExists(String id){
+		
+		Document query = new Document("id", id);
+		return comments.find(query).first() != null;
 	}
 }
