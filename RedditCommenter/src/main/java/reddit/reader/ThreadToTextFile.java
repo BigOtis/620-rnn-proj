@@ -31,7 +31,7 @@ public class ThreadToTextFile {
 	static MongoCollection<Document> threads;
 	static MongoCollection<Document> comments;
 	
-	static String subreddit = "lifeofnorman";
+	static String subreddit = "westworld";
 
 	/**
 	 * Loops through the subreddits specified and
