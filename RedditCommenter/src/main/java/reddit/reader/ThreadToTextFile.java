@@ -31,7 +31,7 @@ public class ThreadToTextFile {
 	static MongoCollection<Document> threads;
 	static MongoCollection<Document> comments;
 	
-	static String subreddit = "westworld";
+	static String subreddit = "all";
 
 	/**
 	 * Loops through the subreddits specified and
@@ -51,7 +51,10 @@ public class ThreadToTextFile {
 		PrintWriter writer = new PrintWriter(new File(subreddit + "_training.txt"));
 		
 		// Retrieve all matching thread docs from sub
-		FindIterable<Document> docs = threads.find(new Document().append("subreddit", subreddit));
+		//FindIterable<Document> docs = threads.find(new Document().append("subreddit", subreddit));
+		
+		// Retrieve all threads
+		FindIterable<Document> docs = threads.find();
 		
 		// Loop through all threads in sub
 		for(Document doc : docs){

@@ -22,6 +22,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/RedditJerk-master"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/RedditJerk"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
