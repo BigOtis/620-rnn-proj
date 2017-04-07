@@ -17,6 +17,7 @@ import ga.dryco.redditjerk.wrappers.Comment;
 import ga.dryco.redditjerk.wrappers.Link;
 import ga.dryco.redditjerk.wrappers.RedditThread;
 import ga.dryco.redditjerk.wrappers.Subreddit;
+import reddit.mongo.MongoFacade;
 
 /**
  * A simple class to populate a local MongoDB
@@ -34,10 +35,7 @@ public class LoadRedditThreads {
 												 };	
 	
 	// Setup mongodb connection
-	static MongoClient mongo;
-	static MongoDatabase db;
-	static MongoCollection<Document> threads;
-	static MongoCollection<Document> comments;
+	private static MongoFacade mongo = MongoFacade.getInstance();
 
 	/**
 	 * Loops through the subreddits specified and
@@ -45,12 +43,6 @@ public class LoadRedditThreads {
 	 */
 	public static void main(String[] args) throws IOException{
 		
-        System.getProperties().load(new FileInputStream("mongo.properties"));
-		mongo = new MongoClient(System.getProperty("mongo.address"), 
-				Integer.valueOf(System.getProperty("mongo.port")));		
-		db = mongo.getDatabase("RedditDB");
-		threads = db.getCollection("threads");
-		comments = db.getCollection("comments");
 		
 		// Reddit API
 		Reddit red = RedditApi.getRedditInstance("Otis Test");
@@ -73,7 +65,7 @@ public class LoadRedditThreads {
 				Integer numComments = link.getNumComments();
 				
 				// Add the thread to the mongodb
-				addThread(link, subredname);
+				mongo.addThread(link, subredname);
 				
 				System.out.println("\t\tAdding " + numComments + " comments for this thread...");
 				RedditThread thread = red.getRedditThread("https://www.reddit.com/" + link.getPermalink(), Sorting.TOP);
@@ -81,87 +73,9 @@ public class LoadRedditThreads {
 				
 				// Get all the comments
 				for(Comment comment : commentList){
-					addComment(comment, threadId);
+					mongo.addComment(comment, threadId);
 				}
 			}
 		}
-		
-		mongo.close();
-	}
-	
-	/**
-	 * Adds the given comment to our MongoDB
-	 * @param comment
-	 * @param threadId
-	 */
-	public static void addComment(Comment comment, String threadId){
-		
-		String id = comment.getId();
-		if(commentExists(id)){
-			return;
-		}
-		
-		String author = comment.getAuthor();
-		String text = comment.getBody();
-		Integer score = comment.getScore();
-		Long createdDate = comment.getCreated();
-		
-		Document commentDoc = new Document()
-				.append("id", id)
-				.append("author", author)
-				.append("text", text)
-				.append("createdDate", createdDate)
-				.append("score", score)
-				.append("threadId", threadId);
-		
-		
-		comments.insertOne(commentDoc);
-	}
-	
-	/**
-	 * Adds the given thread to our MongoDB
-	 * @param link
-	 */
-	public static void addThread(Link link, String subreddit){
-		
-		String threadID = link.getId();
-		if(threadExists(threadID)){
-			return;
-		}
-		
-		String threadTitle = link.getTitle();
-		String threadText = link.getSelftext();
-		String threadLinkURL = link.getUrl();
-		String threadAuthor = link.getAuthor();
-		long threadCreated = link.getCreated();
-		Integer threadScore = link.getScore();
-		Integer numComments = link.getNumComments();
-		
-		System.out.println("\tMongo Insert Thread: " + threadTitle);
-
-		Document threadDoc = new Document()
-				.append("id", threadID)
-				.append("title", threadTitle)
-				.append("subreddit", subreddit)
-				.append("text", threadText)
-				.append("url", threadLinkURL)
-				.append("author", threadAuthor)
-				.append("createDate", threadCreated)
-				.append("score", threadScore)
-				.append("numComments", numComments);	
-		
-		threads.insertOne(threadDoc);
-	}
-	
-	public static boolean threadExists(String id){
-		
-		Document query = new Document("id", id);
-		return threads.find(query).first() != null;
-	}
-	
-	public static boolean commentExists(String id){
-		
-		Document query = new Document("id", id);
-		return comments.find(query).first() != null;
 	}
 }

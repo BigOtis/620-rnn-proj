@@ -22,7 +22,7 @@ import com.mongodb.client.MongoDatabase;
  * @author Phillip Lopez - pgl5711@rit.edu
  *
  */
-public class ThreadToTextFile {
+public class DumpSubRedditToText {
 
 	
 	// Setup mongodb connection
