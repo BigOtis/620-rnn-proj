@@ -3,6 +3,7 @@ package reddit.mongo;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 
 import org.bson.Document;
 
@@ -10,8 +11,10 @@ import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+import ga.dryco.redditjerk.api.enums.Sorting;
 import ga.dryco.redditjerk.wrappers.Comment;
 import ga.dryco.redditjerk.wrappers.Link;
+import ga.dryco.redditjerk.wrappers.RedditThread;
 
 public class MongoFacade {
 
@@ -48,6 +51,10 @@ public class MongoFacade {
 	
 	public static MongoFacade getInstance(){
 		return instance;
+	}
+	
+	public Document getThreadDoc(String id){
+		return threads.find(new Document("id",id)).first();
 	}
 	
 	/**
@@ -112,6 +119,7 @@ public class MongoFacade {
 				.append("numComments", numComments);	
 		
 		threads.insertOne(threadDoc);
+		
 	}
 	
 	public boolean threadExists(String id){
