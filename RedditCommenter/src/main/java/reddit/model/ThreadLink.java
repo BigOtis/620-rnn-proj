@@ -16,21 +16,54 @@ public class ThreadLink {
 		this.redditLink = redditLink;
 		this.threadDoc = threadDoc;
 	}
+	
+//	Document threadDoc = new Document()
+//	.append("id", threadID)
+//	.append("title", threadTitle)
+//	.append("subreddit", subreddit)
+//	.append("text", threadText)
+//	.append("url", threadLinkURL)
+//	.append("author", threadAuthor)
+//	.append("createDate", threadCreated)
+//	.append("score", threadScore)
+//	.append("numComments", numComments);	
+	
+	public String getID(){
+		return threadDoc.getString("id");
+	}
+	
+	public String getTitle(){
+		return threadDoc.getString("title");
+	}
+	
+	public String getSubreddit(){
+		return threadDoc.getString("subreddit");		
+	}
+	
+	public String getText(){
+		return threadDoc.getString("text");
+	}
+	
+	public String getURL(){
+		return threadDoc.getString("url");
+	}
+	
+	public String getAuthor(){
+		return threadDoc.getString("author");
+	}
+			
 
 	public Link getRedditLink() {
 		return redditLink;
 	}
 
-	public void setRedditLink(Link redditLink) {
-		this.redditLink = redditLink;
-	}
-
 	public Document getThreadDoc() {
 		return threadDoc;
 	}
-
-	public void setThreadDoc(Document threadDoc) {
-		this.threadDoc = threadDoc;
+	
+	public String toString(){
+		return threadDoc.toJson();
 	}
 	
+
 }

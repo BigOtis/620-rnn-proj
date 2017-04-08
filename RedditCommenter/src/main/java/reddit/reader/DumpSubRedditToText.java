@@ -6,7 +6,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import org.bson.Document;
+import org.bson.json.JsonWriterSettings;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
@@ -57,6 +62,7 @@ public class DumpSubRedditToText {
 		FindIterable<Document> docs = threads.find();
 		
 		// Loop through all threads in sub
+		writer.println("{");
 		for(Document doc : docs){
 			String title = doc.getString("title");
 			String author = doc.getString("author");
@@ -65,26 +71,21 @@ public class DumpSubRedditToText {
 			Long createDate = doc.getLong("createDate");
 			Integer score = doc.getInteger("score");
 			Integer numComments = doc.getInteger("numComments");
-			
-			// create the thread
-			writer.println("<thread title=[" + title + "] " + 
-									"author=[" + author + "] " + 
-									"text=[" + text + "] " + 
-									"url=[" + url + "] " + 
-									"createDate=[" + createDate + "] " + 
-									"score=[" + score + "] " + 
-									"numComments=[" + numComments + "]>");
-			
-			// add all comments to this thread
-			writer.println("<comments>");
-			printComments(doc, writer);			
-			writer.println("</comments>");
-			writer.print("</thread>");	
+					
+			if(text != null && text.length() > 10){
+				Document subDoc = new Document();
+				subDoc.append("subreddit", doc.get("subreddit"));
+				subDoc.append("title", title);
+				subDoc.append("text", text);
+				writer.println(subDoc.toJson());
+			}
 		}
-		
+		writer.print("}");	
+
 		writer.flush();
 		writer.close();
 	}
+	
 	
 	/**
 	 * Outputs a comment as pure text in a uniform format
