@@ -14,16 +14,16 @@
 -------------------------------------
 -- politicaldiscussion --
 -------------------------------------
-	trump : 58566
-	people : 46163
-	think : 35636
-	party : 21656
-	even : 21274
-	clinton : 19572
-	really : 17879
-	going : 17874
-	much : 17723
-	vote : 17202
+	trump : 59088
+	people : 46719
+	think : 36077
+	party : 21914
+	even : 21549
+	clinton : 19743
+	really : 18084
+	going : 18083
+	much : 17924
+	vote : 17353
 -------------------------------------
 -- Showerthoughts --
 -------------------------------------
@@ -77,18 +77,31 @@
 	much : 233
 	first : 219
 -------------------------------------
+-- ALL_SUBREDDITS --
+-------------------------------------
+	people : 75832
+	think : 68788
+	trump : 60660
+	time : 43434
+	even : 42477
+	really : 40819
+	see : 38096
+	look : 34830
+	way : 34605
+	going : 34586
+-------------------------------------
 -- todayilearned --
 -------------------------------------
-	til : 2754
-	years : 208
-	people : 150
-	world : 148
-	first : 145
-	used : 139
-	year : 134
-	called : 133
-	man : 126
-	two : 123
+	til : 2765
+	years : 233
+	people : 209
+	first : 163
+	world : 157
+	used : 148
+	man : 147
+	called : 146
+	year : 145
+	time : 140
 -------------------------------------
 -- TwoXChromosomes --
 -------------------------------------
@@ -170,29 +183,29 @@
 -------------------------------------
 -- lifeofnorman --
 -------------------------------------
-	norman : 15937
-	thought : 1522
-	time : 1150
-	day : 1061
-	back : 1024
-	work : 1019
-	said : 914
-	good : 738
-	home : 728
-	decided : 667
+	norman : 18577
+	thought : 1695
+	time : 1319
+	day : 1246
+	work : 1159
+	story : 1155
+	back : 1132
+	good : 1053
+	said : 963
+	think : 833
 -------------------------------------
 -- Poetry --
 -------------------------------------
-	poetry : 589
-	poem : 562
-	love : 337
-	time : 258
-	general : 237
-	poems : 234
-	never : 226
-	help : 208
-	read : 204
-	amp : 191
+	poem : 1915
+	poetry : 1494
+	love : 893
+	think : 879
+	really : 770
+	read : 671
+	good : 626
+	poems : 569
+	people : 545
+	time : 526
 -------------------------------------
 -- AskReddit --
 -------------------------------------
@@ -209,16 +222,16 @@
 -------------------------------------
 -- tellmeafact --
 -------------------------------------
-	source : 3464
-	wiki : 2705
-	tmaf : 2507
-	tellmeafact : 2157
-	fact : 1349
-	please : 1321
-	comment : 1270
-	removed : 1257
-	include : 1183
-	comments : 1124
+	source : 5652
+	wiki : 4750
+	tellmeafact : 2857
+	tmaf : 2525
+	fact : 2237
+	org : 2096
+	please : 2069
+	include : 1875
+	wikipedia : 1845
+	removed : 1823
 -------------------------------------
 -- explainlikeimfive --
 -------------------------------------
@@ -235,38 +248,38 @@
 -------------------------------------
 -- jokes --
 -------------------------------------
-	says : 1115
-	man : 1087
-	said : 879
-	well : 473
-	wife : 472
-	guy : 462
-	back : 454
-	people : 454
-	joke : 432
-	asks : 431
+	man : 1279
+	says : 1234
+	said : 1064
+	joke : 832
+	people : 683
+	well : 675
+	guy : 624
+	time : 624
+	back : 603
+	edit : 567
 -------------------------------------
 -- funny --
 -------------------------------------
-	people : 10488
-	time : 8139
-	think : 7554
-	really : 6688
-	good : 6060
-	even : 6022
-	see : 5693
-	well : 5459
-	shit : 5063
-	right : 5035
+	people : 10549
+	time : 8201
+	think : 7620
+	really : 6740
+	good : 6102
+	even : 6079
+	see : 5742
+	well : 5513
+	shit : 5109
+	right : 5080
 -------------------------------------
 -- poetry --
 -------------------------------------
 	poem : 164
-	poetry : 152
+	poetry : 154
 	love : 127
-	poems : 94
+	poems : 96
 	read : 94
-	time : 81
+	time : 82
 	really : 79
 	good : 76
 	think : 76
