@@ -46,7 +46,9 @@ public class MongoFacade {
 		}
 		mongo = new MongoClient(System.getProperty("mongo.address"), 
 				Integer.valueOf(System.getProperty("mongo.port")));		
-		db = mongo.getDatabase("CongressDB");
+		db = mongo.getDatabase("RedditDB");
+		threads = db.getCollection("threads");
+		comments = db.getCollection("comments");
 	}
 	
 	public static MongoFacade getInstance(){

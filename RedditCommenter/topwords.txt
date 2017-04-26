@@ -1,0 +1,273 @@
+-------------------------------------
+-- roastme --
+-------------------------------------
+	look : 18333
+	looks : 7387
+	face : 6526
+	roast : 5404
+	think : 3846
+	guy : 3747
+	even : 3694
+	hair : 3515
+	see : 3451
+	people : 3251
+-------------------------------------
+-- politicaldiscussion --
+-------------------------------------
+	trump : 58566
+	people : 46163
+	think : 35636
+	party : 21656
+	even : 21274
+	clinton : 19572
+	really : 17879
+	going : 17874
+	much : 17723
+	vote : 17202
+-------------------------------------
+-- Showerthoughts --
+-------------------------------------
+	people : 416
+	time : 237
+	edit : 204
+	think : 183
+	someone : 180
+	see : 154
+	life : 153
+	never : 137
+	really : 137
+	day : 127
+-------------------------------------
+-- westworld --
+-------------------------------------
+	ford : 16872
+	think : 15301
+	dolores : 12646
+	hosts : 11722
+	show : 10807
+	arnold : 10519
+	william : 10071
+	host : 9060
+	time : 9037
+	see : 8805
+-------------------------------------
+-- askscience --
+-------------------------------------
+	time : 294
+	light : 277
+	water : 269
+	earth : 269
+	energy : 260
+	edit : 245
+	question : 231
+	different : 222
+	questions : 208
+	science : 208
+-------------------------------------
+-- history --
+-------------------------------------
+	history : 796
+	war : 606
+	people : 437
+	time : 374
+	world : 333
+	years : 315
+	found : 266
+	great : 246
+	much : 233
+	first : 219
+-------------------------------------
+-- todayilearned --
+-------------------------------------
+	til : 2754
+	years : 208
+	people : 150
+	world : 148
+	first : 145
+	used : 139
+	year : 134
+	called : 133
+	man : 126
+	two : 123
+-------------------------------------
+-- TwoXChromosomes --
+-------------------------------------
+	time : 1087
+	really : 1035
+	feel : 1019
+	even : 827
+	told : 822
+	women : 813
+	never : 782
+	people : 728
+	said : 727
+	years : 707
+-------------------------------------
+-- tifu --
+-------------------------------------
+	tifu : 1737
+	back : 1713
+	time : 1460
+	edit : 1043
+	going : 1033
+	day : 962
+	happened : 926
+	around : 917
+	still : 916
+	see : 906
+-------------------------------------
+-- WritingPrompts --
+-------------------------------------
+	time : 512
+	writingprompts : 373
+	world : 360
+	comments : 354
+	day : 344
+	first : 315
+	people : 313
+	years : 311
+	life : 300
+	words : 257
+-------------------------------------
+-- ShittyPoetry --
+-------------------------------------
+	fuck : 289
+	bubbles : 216
+	shit : 182
+	poem : 173
+	penis : 164
+	ass : 149
+	love : 143
+	dick : 138
+	fucking : 129
+	man : 127
+-------------------------------------
+-- LifeProTips --
+-------------------------------------
+	lpt : 2205
+	people : 770
+	time : 600
+	edit : 595
+	something : 453
+	work : 450
+	use : 442
+	someone : 439
+	way : 379
+	even : 371
+-------------------------------------
+-- VoiceActing --
+-------------------------------------
+	voice : 1405
+	work : 391
+	acting : 334
+	looking : 294
+	time : 251
+	need : 243
+	actors : 228
+	actor : 208
+	game : 207
+	good : 196
+-------------------------------------
+-- lifeofnorman --
+-------------------------------------
+	norman : 15937
+	thought : 1522
+	time : 1150
+	day : 1061
+	back : 1024
+	work : 1019
+	said : 914
+	good : 738
+	home : 728
+	decided : 667
+-------------------------------------
+-- Poetry --
+-------------------------------------
+	poetry : 589
+	poem : 562
+	love : 337
+	time : 258
+	general : 237
+	poems : 234
+	never : 226
+	help : 208
+	read : 204
+	amp : 191
+-------------------------------------
+-- AskReddit --
+-------------------------------------
+	people : 291
+	thing : 207
+	ever : 164
+	serious : 156
+	life : 137
+	something : 128
+	best : 127
+	someone : 123
+	time : 107
+	redditors : 97
+-------------------------------------
+-- tellmeafact --
+-------------------------------------
+	source : 3464
+	wiki : 2705
+	tmaf : 2507
+	tellmeafact : 2157
+	fact : 1349
+	please : 1321
+	comment : 1270
+	removed : 1257
+	include : 1183
+	comments : 1124
+-------------------------------------
+-- explainlikeimfive --
+-------------------------------------
+	eli5 : 2751
+	people : 377
+	edit : 316
+	water : 227
+	much : 213
+	time : 211
+	work : 191
+	even : 189
+	something : 186
+	different : 183
+-------------------------------------
+-- jokes --
+-------------------------------------
+	says : 1115
+	man : 1087
+	said : 879
+	well : 473
+	wife : 472
+	guy : 462
+	back : 454
+	people : 454
+	joke : 432
+	asks : 431
+-------------------------------------
+-- funny --
+-------------------------------------
+	people : 10488
+	time : 8139
+	think : 7554
+	really : 6688
+	good : 6060
+	even : 6022
+	see : 5693
+	well : 5459
+	shit : 5063
+	right : 5035
+-------------------------------------
+-- poetry --
+-------------------------------------
+	poem : 164
+	poetry : 152
+	love : 127
+	poems : 94
+	read : 94
+	time : 81
+	really : 79
+	good : 76
+	think : 76
+	amp : 64

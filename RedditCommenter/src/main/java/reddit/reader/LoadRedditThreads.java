@@ -23,9 +23,15 @@ public class LoadRedditThreads {
 	
 	// Subreddits we want to load in
 	static String[] subredStrings = new String[]{//"westworld", "roastme", "funny",
-												"lifeofnorman",
-												 //"politicaldiscussion", "tellmeafact"
+												//"lifeofnorman","politicaldiscussion","tellmeafact",
+												 //"jokes","todayilearned", "Poetry",
+												 "ShittyPoetry",
+												 "AskReddit","LifeProTips","Showerthoughts",
+												 "explainlikeimfive","WritingPrompts","askscience",
+												 "VoiceActing","history","tifu","TwoXChromosomes",
 												 };	
+	
+	static boolean threadsOnly = false;
 	
 	// Setup mongodb connection
 	private static MongoFacade mongo = MongoFacade.getInstance();
@@ -48,8 +54,8 @@ public class LoadRedditThreads {
 			System.out.println("*************************************************************");
 
 			Subreddit subred = red.getSubreddit(subredname);
-			List<Link> links = subred.getTop(1000, FromPast.YEAR);
-			
+			List<Link> links = subred.getTop(1000, FromPast.ALL_TIME);
+			System.out.println("Found: " + links.size() + " threads");
 			// Go through the top threads from the past year
 			for(Link link : links){
 				
@@ -60,13 +66,20 @@ public class LoadRedditThreads {
 				// Add the thread to the mongodb
 				mongo.addThread(link, subredname);
 				
-				System.out.println("\t\tAdding " + numComments + " comments for this thread...");
-				RedditThread thread = red.getRedditThread("https://www.reddit.com/" + link.getPermalink(), Sorting.TOP);
-				List<Comment> commentList = thread.getFlatComments();
-				
-				// Get all the comments
-				for(Comment comment : commentList){
-					mongo.addComment(comment, threadId);
+				if(!threadsOnly){
+					System.out.println("\t\tAdding " + numComments + " comments for this thread...");
+					RedditThread thread = red.getRedditThread("https://www.reddit.com/" + link.getPermalink(), Sorting.TOP);
+					List<Comment> commentList = thread.getFlatComments();
+					
+					// Get all the comments
+					int i = 0;
+					for(Comment comment : commentList){
+						if(i > 9){
+							continue;
+						}
+						mongo.addComment(comment, threadId);
+						i++;
+					}
 				}
 			}
 		}
