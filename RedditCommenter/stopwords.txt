@@ -222,7 +222,6 @@ also
 didn
 now
 went
-
 whom
 why
 why's
@@ -282,3 +281,8 @@ youre
 youve
 www
 reddit
+way
+going
+http
+https
+

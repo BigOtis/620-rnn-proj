@@ -36,6 +36,7 @@ public class MongoFacade {
 	
 	public MongoCollection<Document> threads;
 	public MongoCollection<Document> comments;
+	public MongoCollection<Document> torch_threads;
 	
 	public MongoFacade(){
         try {
@@ -49,6 +50,7 @@ public class MongoFacade {
 		db = mongo.getDatabase("RedditDB");
 		threads = db.getCollection("threads");
 		comments = db.getCollection("comments");
+		torch_threads = db.getCollection("torch_threads");
 	}
 	
 	public static MongoFacade getInstance(){

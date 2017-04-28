@@ -1,31 +1,31 @@
 -------------------------------------
--- roastme --
+-- roastme VS: 4139 VS/T: 1.4904573280518545 --
 -------------------------------------
-	look : 18333
-	looks : 7387
-	face : 6526
-	roast : 5404
-	think : 3846
-	guy : 3747
-	even : 3694
-	hair : 3515
-	see : 3451
-	people : 3251
+	roast : 1101
+	worst : 173
+	friend : 160
+	best : 137
+	old : 132
+	year : 122
+	roasted : 109
+	give : 99
+	thinks : 99
+	roastme : 98
 -------------------------------------
--- politicaldiscussion --
+-- politicaldiscussion VS: 14203 VS/T: 10.489660265878877 --
 -------------------------------------
-	trump : 59088
-	people : 46719
-	think : 36077
-	party : 21914
-	even : 21549
-	clinton : 19743
-	really : 18084
-	going : 18083
-	much : 17924
-	vote : 17353
+	trump : 2123
+	clinton : 804
+	party : 633
+	2016 : 589
+	election : 558
+	think : 481
+	campaign : 473
+	sanders : 459
+	president : 442
+	people : 432
 -------------------------------------
--- Showerthoughts --
+-- Showerthoughts VS: 7545 VS/T: 2.78002947678703 --
 -------------------------------------
 	people : 416
 	time : 237
@@ -38,20 +38,20 @@
 	really : 137
 	day : 127
 -------------------------------------
--- westworld --
+-- westworld VS: 8076 VS/T: 6.73 --
 -------------------------------------
-	ford : 16872
-	think : 15301
-	dolores : 12646
-	hosts : 11722
-	show : 10807
-	arnold : 10519
-	william : 10071
-	host : 9060
-	time : 9037
-	see : 8805
+	dolores : 719
+	ford : 612
+	westworld : 600
+	episode : 595
+	arnold : 491
+	hosts : 364
+	william : 361
+	mib : 344
+	bernard : 325
+	see : 297
 -------------------------------------
--- askscience --
+-- askscience VS: 12140 VS/T: 6.122037317196168 --
 -------------------------------------
 	time : 294
 	light : 277
@@ -64,7 +64,7 @@
 	questions : 208
 	science : 208
 -------------------------------------
--- history --
+-- history VS: 15557 VS/T: 8.637978900610772 --
 -------------------------------------
 	history : 796
 	war : 606
@@ -77,33 +77,33 @@
 	much : 233
 	first : 219
 -------------------------------------
--- ALL_SUBREDDITS --
+-- ALL_SUBREDDITS VS: 65946 VS/T: 1.586231779477558 --
 -------------------------------------
-	people : 75832
-	think : 68788
-	trump : 60660
-	time : 43434
-	even : 42477
-	really : 40819
-	see : 38096
-	look : 34830
-	way : 34605
-	going : 34586
+	norman : 13387
+	time : 7661
+	people : 6187
+	back : 5471
+	day : 4707
+	said : 4420
+	really : 4301
+	first : 4283
+	work : 4241
+	see : 4123
 -------------------------------------
--- todayilearned --
+-- todayilearned VS: 12516 VS/T: 4.5413642960812775 --
 -------------------------------------
-	til : 2765
-	years : 233
-	people : 209
-	first : 163
-	world : 157
-	used : 148
-	man : 147
-	called : 146
-	year : 145
-	time : 140
+	til : 2754
+	years : 208
+	people : 150
+	world : 148
+	first : 145
+	used : 139
+	year : 134
+	called : 133
+	man : 126
+	two : 123
 -------------------------------------
--- TwoXChromosomes --
+-- TwoXChromosomes VS: 15451 VS/T: 7.1631896152063055 --
 -------------------------------------
 	time : 1087
 	really : 1035
@@ -116,20 +116,20 @@
 	said : 727
 	years : 707
 -------------------------------------
--- tifu --
+-- tifu VS: 21390 VS/T: 15.073995771670191 --
 -------------------------------------
 	tifu : 1737
 	back : 1713
 	time : 1460
 	edit : 1043
-	going : 1033
 	day : 962
 	happened : 926
 	around : 917
 	still : 916
 	see : 906
+	really : 900
 -------------------------------------
--- WritingPrompts --
+-- WritingPrompts VS: 12998 VS/T: 4.826587448941701 --
 -------------------------------------
 	time : 512
 	writingprompts : 373
@@ -142,7 +142,7 @@
 	life : 300
 	words : 257
 -------------------------------------
--- ShittyPoetry --
+-- ShittyPoetry VS: 9180 VS/T: 8.44526218951242 --
 -------------------------------------
 	fuck : 289
 	bubbles : 216
@@ -155,20 +155,20 @@
 	fucking : 129
 	man : 127
 -------------------------------------
--- LifeProTips --
+-- LifeProTips VS: 12472 VS/T: 5.984644913627639 --
 -------------------------------------
-	lpt : 2205
-	people : 770
+	lpt : 2206
+	people : 771
 	time : 600
 	edit : 595
 	something : 453
 	work : 450
 	use : 442
 	someone : 439
-	way : 379
 	even : 371
+	much : 343
 -------------------------------------
--- VoiceActing --
+-- VoiceActing VS: 8359 VS/T: 7.8267790262172285 --
 -------------------------------------
 	voice : 1405
 	work : 391
@@ -181,33 +181,20 @@
 	game : 207
 	good : 196
 -------------------------------------
--- lifeofnorman --
+-- lifeofnorman VS: 14553 VS/T: 9.299041533546326 --
 -------------------------------------
-	norman : 18577
-	thought : 1695
-	time : 1319
-	day : 1246
-	work : 1159
-	story : 1155
-	back : 1132
-	good : 1053
-	said : 963
-	think : 833
+	norman : 13382
+	thought : 1349
+	time : 954
+	day : 935
+	back : 903
+	work : 886
+	said : 871
+	home : 670
+	decided : 632
+	new : 561
 -------------------------------------
--- Poetry --
--------------------------------------
-	poem : 1915
-	poetry : 1494
-	love : 893
-	think : 879
-	really : 770
-	read : 671
-	good : 626
-	poems : 569
-	people : 545
-	time : 526
--------------------------------------
--- AskReddit --
+-- AskReddit VS: 4645 VS/T: 1.7254829123328381 --
 -------------------------------------
 	people : 291
 	thing : 207
@@ -220,20 +207,20 @@
 	time : 107
 	redditors : 97
 -------------------------------------
--- tellmeafact --
+-- tellmeafact VS: 10299 VS/T: 7.837899543378995 --
 -------------------------------------
-	source : 5652
-	wiki : 4750
-	tellmeafact : 2857
-	tmaf : 2525
-	fact : 2237
-	org : 2096
-	please : 2069
-	include : 1875
-	wikipedia : 1845
-	removed : 1823
+	tmaf : 2469
+	comments : 1028
+	score : 957
+	tellmeafact : 950
+	amp : 630
+	comment : 624
+	nbsp : 575
+	source : 343
+	org : 305
+	wiki : 300
 -------------------------------------
--- explainlikeimfive --
+-- explainlikeimfive VS: 10719 VS/T: 3.9758902077151337 --
 -------------------------------------
 	eli5 : 2751
 	people : 377
@@ -246,41 +233,41 @@
 	something : 186
 	different : 183
 -------------------------------------
--- jokes --
+-- jokes VS: 11473 VS/T: 3.529067979083359 --
 -------------------------------------
-	man : 1279
-	says : 1234
-	said : 1064
-	joke : 832
-	people : 683
-	well : 675
-	guy : 624
-	time : 624
-	back : 603
-	edit : 567
+	says : 1089
+	man : 1033
+	said : 827
+	wife : 463
+	asks : 428
+	guy : 416
+	back : 412
+	well : 386
+	two : 375
+	day : 373
 -------------------------------------
--- funny --
+-- funny VS: 5550 VS/T: 1.4609107659910503 --
 -------------------------------------
-	people : 10549
-	time : 8201
-	think : 7620
-	really : 6740
-	good : 6102
-	even : 6079
-	see : 5742
-	well : 5513
-	shit : 5109
-	right : 5080
+	today : 81
+	new : 77
+	friend : 67
+	time : 65
+	day : 62
+	dog : 62
+	found : 55
+	best : 53
+	cat : 53
+	guy : 52
 -------------------------------------
--- poetry --
+-- poetry VS: 10974 VS/T: 9.276415891800507 --
 -------------------------------------
-	poem : 164
-	poetry : 154
-	love : 127
-	poems : 96
-	read : 94
-	time : 82
-	really : 79
-	good : 76
-	think : 76
-	amp : 64
+	poetry : 608
+	poem : 581
+	love : 340
+	general : 271
+	time : 267
+	poems : 241
+	never : 230
+	help : 212
+	read : 209
+	amp : 197

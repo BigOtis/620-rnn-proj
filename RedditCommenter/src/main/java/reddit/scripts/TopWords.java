@@ -31,14 +31,16 @@ import reddit.mongo.MongoFacade;
  */
 public class TopWords {
 	
-	static boolean includeComments = true;
+	static boolean includeComments = false;
 	
 	public static void main(String[] args) throws FileNotFoundException{
 		
 		Set<String> stopWords = loadStopWords();
 		MongoFacade mongo = MongoFacade.getInstance();
 		Map<String, Map<String, Integer>> srcount = new HashMap<>();
-		HashMap<String, Integer> allMap = new HashMap<>();
+		Map<String, Integer> totalWords = new HashMap<>();
+		totalWords.put("ALL_SUBREDDITS", 0);
+		Map<String, Integer> allMap = new HashMap<>();
 		srcount.put("ALL_SUBREDDITS", allMap);
 		
 		// Loop through every thread doc
@@ -77,27 +79,43 @@ public class TopWords {
 		
 			// add all the words we found to the wordmap, if they aren't stop words
 			String[] words = fullText.split(" ");
+			int count = 0;
 			for(String word : words){
 				if(!stopWords.contains(word) && word.length() > 2){
+					// keep track of count for this subreddit
 					if(countMap.containsKey(word)){
 						countMap.put(word, countMap.get(word)+1);
 					}
 					else{
 						countMap.put(word, 1);
 					}
+					// keep track of all subreddits combined
 					if(allMap.containsKey(word)){
 						allMap.put(word, allMap.get(word)+1);
 					}
 					else{
 						allMap.put(word, 1);
 					}
+					count++;
 				}
 			}
+			
+			if(!totalWords.containsKey(subreddit)){
+				totalWords.put(subreddit, count);
+			}
+			else{
+				totalWords.put(subreddit, totalWords.get(subreddit) + count);
+			}
+			totalWords.put("ALL_SUBREDDITS", totalWords.get("ALL_SUBREDDITS") + count);
 		}
 		
 		// output the results to a file
 		PrintWriter pw = new PrintWriter("topwords.txt");
+		PrintWriter csv = new PrintWriter("subreddit_word_stats.csv");
+		csv.println("subreddit,vocab_size,word_count,size_count,vocab_per_thread,tw1,tw2,tw3,tw4,tw5,tw6,tw7,tw8,tw9,tw10");
 		for(String sr : srcount.keySet()){
+			
+			String row = sr;
 			final Map<String, Integer> countMap = srcount.get(sr);
 			List<String> words = new ArrayList<>(countMap.keySet());
 			Collections.sort(words, new Comparator<String>() {
@@ -107,15 +125,27 @@ public class TopWords {
 				}
 			});
 			
+			double threadCount = (double) mongo.threads.count(new Document("subreddit", sr));
+			if(threadCount == 0){
+				threadCount = mongo.threads.count();
+			}
+			
+			Double vocabPerThread = ((double) countMap.keySet().size()) / threadCount;	
+			Double uniqueOverTotal = ((double) countMap.keySet().size()) / ((double)  totalWords.get(sr));
+			row += "," + countMap.keySet().size() + "," + totalWords.get(sr) + "," + uniqueOverTotal + "," + vocabPerThread + ",";
 			pw.println("-------------------------------------");
-			pw.println("-- " + sr + " --");
+			pw.println("-- " + sr + " VS: " + countMap.keySet().size() 
+					+ " VS/T: " + vocabPerThread + " --");
 			pw.println("-------------------------------------");
-
 			for(int i = 0; i < 10; i++){
 				pw.println("\t" + words.get(i) + " : " + countMap.get(words.get(i)));
+				row += words.get(i) + ",";
 			}
+			csv.println(row);
 		}
 		
+		csv.flush();
+		csv.close();
 		pw.flush();
 		pw.close();
 	}

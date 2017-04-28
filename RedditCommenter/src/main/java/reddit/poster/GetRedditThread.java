@@ -28,8 +28,8 @@ public class GetRedditThread {
 			"westworld", 
 			"roastme", "funny",
 			"lifeofnorman",
-			 "politicaldiscussion", 
-			 "tellmeafact"
+			"politicaldiscussion", 
+			"tellmeafact"
 	};	
 	
 	public reddit.model.ThreadLink getRandomThread(){
