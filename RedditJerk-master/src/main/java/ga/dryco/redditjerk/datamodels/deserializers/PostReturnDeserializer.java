@@ -16,7 +16,7 @@ public class PostReturnDeserializer implements JsonDeserializer<PostReturn> {
 
         if(json.getAsJsonObject().get("json").getAsJsonObject().get("errors").getAsJsonArray().size() != 0){
             //TODO:improve this
-
+        	System.out.println(json.getAsJsonObject().get("json").getAsJsonObject().get("errors"));
             throw new RedditJerkException("Rate Limit Error, try later");
         } else {
             JsonArray thinglist = json.getAsJsonObject().get("json").getAsJsonObject().get("data").getAsJsonObject().getAsJsonArray("things");

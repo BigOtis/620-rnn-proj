@@ -6,6 +6,7 @@ import org.bson.Document;
 
 import ga.dryco.redditjerk.api.Reddit;
 import ga.dryco.redditjerk.implementation.RedditApi;
+import ga.dryco.redditjerk.wrappers.Link;
 import ga.dryco.redditjerk.wrappers.User;
 import reddit.mongo.MongoFacade;
 
@@ -24,12 +25,43 @@ public class TorchBot2017 {
 		Reddit red = RedditApi.getRedditInstance("Otis Test");
 	    User user = red.login("torchbot2017", "gibatad", "5WRAIQAXlszYGA", "r0UlUU295NTuZxQ6j3UTSnpj4u8");
 	    
+	    String title = thread.getString("title");
+	    if(title.length() >= 300){
+	    	title = title.substring(0, 299);
+	    }
+	    String text = thread.getString("text");
+	    if(text == null){
+	    	return;
+	    }
+	    if(text.length() > 15000){
+	    	text = text.substring(0, 14950);
+	    }
+	    String subreddit = thread.getString("subreddit");
+	    if(subreddit.equals("TIFU")){
+	    	text += "TL:DR - and that is how it is what it is.";
+	    }
+	    if(subreddit.equals("lifeofnorman")){
+	    	System.out.println("Skipping life of norman for now...");
+	    	return;
+	    }
+
 	    System.out.println("Torchbot posting new thread:\n"
-	    		+ "\tSubreddit: " + thread.getString("subreddit") + "\n"
-	    		+ "\tTitle: " + thread.getString("title")
+	    		+ "\tSubreddit: " + subreddit + "\n"
+	    		+ "\tTitle: " + title
 	    );
 	    
+	    try{
+	    	Link link = red.Submit(thread.getString("subreddit"), title, text, "self");
+		    String url = link.getUrl();
+		    thread.append("url", url);
+	    }
+	    catch(Exception e){
+	    	System.err.println("Error posting thread...");
+	    }
 	    
+	    thread.append("posted", true);
+	    mongo.torch_threads.replaceOne(new Document("_id", thread.get("_id")), thread);
+	    System.out.println("Thread posted and record updated!");
 	}
 	
 }
