@@ -23,11 +23,14 @@ public class TorchBot2017 {
 		
 		// API is broken for authentication ...
 		Reddit red = RedditApi.getRedditInstance("Otis Test");
-	    User user = red.login("torchbot2017", "gibatad", "5WRAIQAXlszYGA", "r0UlUU295NTuZxQ6j3UTSnpj4u8");
+	    //User user = red.login("torchbot2017", "gibatad", "5WRAIQAXlszYGA", "r0UlUU295NTuZxQ6j3UTSnpj4u8");
+	    User user = red.login("barrybonds10", "barrybonds10", "paM3qk8nzuPu7g", "cdZbFFM_tpnyeC3eL36KPmVcLMU");
+
 	    
 	    String title = thread.getString("title");
+	    
 	    if(title.length() >= 300){
-	    	title = title.substring(0, 299);
+	    	title = title.substring(0, 250);
 	    }
 	    String text = thread.getString("text");
 	    if(text == null){
@@ -37,12 +40,18 @@ public class TorchBot2017 {
 	    	text = text.substring(0, 14950);
 	    }
 	    String subreddit = thread.getString("subreddit");
-	    if(subreddit.equals("TIFU")){
+	    if(subreddit.equals("tifu")){
 	    	text += "TL:DR - and that is how it is what it is.";
+	    	if(text.length() < 750){
+	    		return;
+	    	}
 	    }
 	    if(subreddit.equals("lifeofnorman")){
 	    	System.out.println("Skipping life of norman for now...");
 	    	return;
+	    }
+	    if(subreddit.equals("Poetry")){
+	    	title += "[General]";
 	    }
 
 	    System.out.println("Torchbot posting new thread:\n"

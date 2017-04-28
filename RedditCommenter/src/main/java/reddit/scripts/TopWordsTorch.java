@@ -118,30 +118,32 @@ public class TopWordsTorch {
 			String row = sr;
 			final Map<String, Integer> countMap = srcount.get(sr);
 			List<String> words = new ArrayList<>(countMap.keySet());
-			Collections.sort(words, new Comparator<String>() {
-				@Override
-				public int compare(String o1, String o2) {
-					return countMap.get(o2).compareTo(countMap.get(o1));
+			if(words.size() >= 10){
+				Collections.sort(words, new Comparator<String>() {
+					@Override
+					public int compare(String o1, String o2) {
+						return countMap.get(o2).compareTo(countMap.get(o1));
+					}
+				});
+				
+				double threadCount = (double) mongo.threads.count(new Document("subreddit", sr));
+				if(threadCount == 0){
+					threadCount = mongo.threads.count();
 				}
-			});
-			
-			double threadCount = (double) mongo.threads.count(new Document("subreddit", sr));
-			if(threadCount == 0){
-				threadCount = mongo.threads.count();
+				
+				Double vocabPerThread = ((double) countMap.keySet().size()) / threadCount;	
+				Double uniqueOverTotal = ((double) countMap.keySet().size()) / ((double)  totalWords.get(sr));
+				row += "," + countMap.keySet().size() + "," + totalWords.get(sr) + "," + uniqueOverTotal + "," + vocabPerThread + ",";
+				pw.println("-------------------------------------");
+				pw.println("-- " + sr + " VS: " + countMap.keySet().size() 
+						+ " VS/T: " + vocabPerThread + " --");
+				pw.println("-------------------------------------");
+				for(int i = 0; i < 10; i++){
+					pw.println("\t" + words.get(i) + " : " + countMap.get(words.get(i)));
+					row += words.get(i) + ",";
+				}
+				csv.println(row);
 			}
-			
-			Double vocabPerThread = ((double) countMap.keySet().size()) / threadCount;	
-			Double uniqueOverTotal = ((double) countMap.keySet().size()) / ((double)  totalWords.get(sr));
-			row += "," + countMap.keySet().size() + "," + totalWords.get(sr) + "," + uniqueOverTotal + "," + vocabPerThread + ",";
-			pw.println("-------------------------------------");
-			pw.println("-- " + sr + " VS: " + countMap.keySet().size() 
-					+ " VS/T: " + vocabPerThread + " --");
-			pw.println("-------------------------------------");
-			for(int i = 0; i < 10; i++){
-				pw.println("\t" + words.get(i) + " : " + countMap.get(words.get(i)));
-				row += words.get(i) + ",";
-			}
-			csv.println(row);
 		}
 		
 		csv.flush();

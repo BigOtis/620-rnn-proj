@@ -1,159 +1,133 @@
 -------------------------------------
--- roastme VS: 54 VS/T: 0.019445444724522868 --
+-- roastme VS: 3396 VS/T: 1.2229024126755492 --
 -------------------------------------
-	expert : 1
-	hands : 1
-	use : 1
-	administration : 1
-	folding : 1
-	yeah : 1
-	laptop : 1
-	hope : 1
-	hold : 1
-	edge : 1
+	time : 226
+	see : 183
+	said : 183
+	still : 158
+	started : 134
+	good : 129
+	bathroom : 124
+	bit : 123
+	little : 121
+	story : 121
 -------------------------------------
--- politicaldiscussion VS: 17001 VS/T: 12.556129985228951 --
+-- Showerthoughts VS: 7733 VS/T: 2.8492999263080323 --
 -------------------------------------
-	trump : 1460
-	clinton : 563
-	party : 459
-	election : 368
-	2016 : 364
-	campaign : 318
-	people : 312
-	donald : 312
-	president : 301
-	republican : 298
+	time : 218
+	back : 143
+	see : 142
+	edit : 137
+	people : 131
+	really : 128
+	good : 122
+	said : 118
+	day : 115
+	still : 111
 -------------------------------------
--- Showerthoughts VS: 6010 VS/T: 2.2144436256448046 --
+-- westworld VS: 7760 VS/T: 6.466666666666667 --
 -------------------------------------
-	time : 104
-	edit : 88
-	back : 83
-	people : 69
-	day : 62
-	even : 57
-	good : 55
-	work : 55
-	still : 54
-	much : 52
+	time : 322
+	first : 260
+	see : 259
+	people : 229
+	post : 207
+	party : 191
+	state : 186
+	thing : 182
+	really : 177
+	story : 176
 -------------------------------------
--- westworld VS: 4449 VS/T: 3.7075 --
+-- ShowerThoughts VS: 3701 VS/T: 0.08902198489440516 --
 -------------------------------------
-	people : 58
-	edit : 52
-	time : 47
-	even : 41
-	trump : 40
-	first : 39
-	new : 34
-	two : 31
-	right : 31
-	see : 31
+	said : 408
+	time : 271
+	see : 237
+	bathroom : 229
+	still : 222
+	back : 213
+	started : 213
+	bit : 206
+	little : 171
+	day : 149
 -------------------------------------
--- askscience VS: 5380 VS/T: 2.713061018658598 --
+-- askscience VS: 8902 VS/T: 4.48915784165406 --
 -------------------------------------
-	people : 78
-	edit : 59
-	good : 54
-	something : 54
-	time : 53
-	voice : 44
-	see : 43
-	really : 42
-	many : 41
-	much : 40
+	time : 436
+	see : 344
+	people : 319
+	said : 310
+	good : 275
+	still : 262
+	first : 261
+	really : 254
+	lot : 249
+	bit : 227
 -------------------------------------
--- history VS: 3771 VS/T: 2.093836757357024 --
+-- ALL_SUBREDDITS VS: 52877 VS/T: 1.2718766536777795 --
 -------------------------------------
-	time : 42
-	people : 40
-	edit : 30
-	see : 28
-	really : 27
-	work : 26
-	much : 26
-	back : 25
-	never : 23
-	think : 22
+	time : 6725
+	norman : 5664
+	said : 5599
+	see : 5002
+	back : 3961
+	first : 3943
+	still : 3849
+	people : 3744
+	good : 3621
+	day : 3486
 -------------------------------------
--- ALL_SUBREDDITS VS: 41171 VS/T: 0.9903064415259537 --
+-- TwoXChromosomes VS: 6252 VS/T: 2.898470097357441 --
 -------------------------------------
-	norman : 5167
-	time : 1581
-	trump : 1564
-	back : 1309
-	people : 1270
-	said : 1152
-	work : 1121
-	edit : 1065
-	thought : 1010
-	day : 1000
+	said : 446
+	time : 349
+	still : 278
+	bit : 265
+	little : 256
+	see : 250
+	started : 236
+	back : 220
+	bathroom : 213
+	day : 200
 -------------------------------------
--- TwoXChromosomes VS: 3626 VS/T: 1.6810384793694946 --
+-- WritingPrompts VS: 4030 VS/T: 1.4964723356851095 --
 -------------------------------------
-	time : 55
-	edit : 42
-	people : 36
-	really : 32
-	back : 29
-	first : 29
-	work : 28
-	much : 28
-	day : 26
-	years : 26
+	time : 77
+	see : 57
+	people : 55
+	first : 53
+	day : 52
+	said : 49
+	back : 48
+	say : 45
+	good : 41
+	something : 41
 -------------------------------------
--- tifu VS: 10518 VS/T: 7.412262156448203 --
+-- tect VS: 45 VS/T: 0.0010824072737768797 --
 -------------------------------------
-	tifu : 387
-	time : 257
-	back : 252
-	edit : 212
-	really : 191
-	said : 172
-	first : 167
-	people : 164
-	work : 154
-	day : 153
+	things : 2
+	voice : 1
+	religious : 1
+	shower : 1
+	mostly : 1
+	prospects : 1
+	leading : 1
+	approaching : 1
+	weekend : 1
+	enjoy : 1
 -------------------------------------
--- WritingPrompts VS: 1819 VS/T: 0.675454883030078 --
+-- LifeProTips VS: 8535 VS/T: 4.095489443378119 --
 -------------------------------------
-	day : 15
-	really : 15
-	something : 14
-	people : 14
-	time : 13
-	lot : 13
-	well : 12
-	first : 12
-	actually : 11
-	right : 10
--------------------------------------
--- ShittyPoetry VS: 4143 VS/T: 3.811407543698252 --
--------------------------------------
-	time : 43
-	back : 41
-	love : 34
-	edit : 33
-	never : 32
-	day : 29
-	still : 28
-	said : 28
-	good : 27
-	fuck : 27
--------------------------------------
--- LifeProTips VS: 6725 VS/T: 3.2269673704414585 --
--------------------------------------
-	lpt : 277
-	edit : 133
-	time : 114
-	people : 99
-	something : 83
-	work : 80
-	see : 73
-	back : 69
-	first : 64
-	even : 64
+	lpt : 519
+	time : 274
+	edit : 230
+	see : 203
+	people : 196
+	back : 174
+	first : 174
+	really : 159
+	work : 157
+	something : 152
 -------------------------------------
 -- now VS: 14 VS/T: 3.3674892961947373E-4 --
 -------------------------------------
@@ -168,18 +142,109 @@
 	empty : 1
 	ripped : 1
 -------------------------------------
--- VoiceActing VS: 3656 VS/T: 3.4232209737827715 --
+-- Poetry VS: 7363 VS/T: 0.17710588348487036 --
 -------------------------------------
-	edit : 49
-	time : 47
-	voice : 43
-	people : 43
-	first : 32
-	thanks : 32
-	think : 31
-	really : 31
-	back : 30
-	good : 28
+	time : 428
+	said : 424
+	see : 371
+	still : 291
+	good : 267
+	back : 255
+	bit : 253
+	started : 250
+	first : 245
+	little : 244
+-------------------------------------
+-- lifeofnorman VS: 11507 VS/T: 7.3527156549520765 --
+-------------------------------------
+	norman : 4791
+	thought : 494
+	said : 417
+	back : 381
+	work : 312
+	time : 286
+	day : 260
+	decided : 257
+	man : 255
+	home : 246
+-------------------------------------
+-- poetry VS: 3291 VS/T: 2.7819103972950128 --
+-------------------------------------
+	said : 246
+	see : 245
+	time : 235
+	bit : 200
+	still : 196
+	little : 155
+	started : 149
+	bathroom : 144
+	day : 135
+	good : 131
+-------------------------------------
+-- politicaldiscussion VS: 17558 VS/T: 12.967503692762186 --
+-------------------------------------
+	trump : 1690
+	party : 883
+	clinton : 651
+	election : 580
+	state : 562
+	president : 503
+	political : 492
+	campaign : 472
+	2016 : 431
+	republican : 423
+-------------------------------------
+-- history VS: 7458 VS/T: 4.141032759578012 --
+-------------------------------------
+	time : 367
+	see : 253
+	first : 247
+	comments : 216
+	people : 200
+	thing : 193
+	really : 174
+	story : 170
+	still : 169
+	problem : 168
+-------------------------------------
+-- tifu VS: 13832 VS/T: 9.7477096546864 --
+-------------------------------------
+	said : 892
+	tifu : 848
+	time : 833
+	back : 727
+	started : 608
+	see : 568
+	still : 550
+	little : 538
+	day : 522
+	first : 486
+-------------------------------------
+-- ShittyPoetry VS: 7480 VS/T: 6.88132474701012 --
+-------------------------------------
+	said : 462
+	time : 326
+	little : 271
+	see : 269
+	back : 254
+	man : 218
+	still : 214
+	good : 202
+	day : 202
+	bathroom : 202
+-------------------------------------
+-- VoiceActing VS: 6191 VS/T: 5.796816479400749 --
+-------------------------------------
+	time : 386
+	said : 314
+	see : 300
+	bit : 237
+	still : 216
+	back : 208
+	good : 201
+	little : 199
+	started : 193
+	first : 192
 -------------------------------------
 -- sides VS: 51 VS/T: 0.0012267282436137972 --
 -------------------------------------
@@ -194,93 +259,54 @@
 	tried : 1
 	falls : 1
 -------------------------------------
--- Poetry VS: 3597 VS/T: 0.08652042141723193 --
+-- AskReddit VS: 4404 VS/T: 1.6359583952451708 --
 -------------------------------------
-	time : 35
-	back : 33
-	first : 33
-	people : 31
-	see : 27
-	day : 24
-	love : 24
-	thought : 24
-	edit : 23
-	said : 23
+	time : 566
+	thing : 374
+	see : 358
+	story : 330
+	said : 329
+	first : 321
+	people : 317
+	lot : 306
+	bit : 289
+	able : 276
 -------------------------------------
--- lifeofnorman VS: 11340 VS/T: 7.246006389776358 --
+-- tellmeafact VS: 5550 VS/T: 4.223744292237443 --
 -------------------------------------
-	norman : 4620
-	thought : 474
-	said : 407
-	back : 368
-	work : 302
-	time : 269
-	man : 246
-	day : 242
-	decided : 242
-	home : 238
+	time : 342
+	tmaf : 307
+	see : 244
+	thing : 214
+	first : 206
+	people : 200
+	still : 188
+	comments : 187
+	lot : 181
+	story : 181
 -------------------------------------
--- AskReddit VS: 1357 VS/T: 0.5040861812778603 --
+-- explainlikeimfive VS: 8576 VS/T: 3.1810089020771515 --
 -------------------------------------
-	time : 13
-	people : 12
-	edit : 11
-	thanks : 8
-	post : 6
-	show : 6
-	give : 6
-	point : 6
-	see : 6
-	something : 6
+	eli5 : 643
+	people : 225
+	time : 215
+	see : 199
+	edit : 166
+	really : 157
+	voice : 136
+	work : 134
+	lot : 128
+	first : 127
 -------------------------------------
--- tellmeafact VS: 2247 VS/T: 1.7100456621004567 --
+-- jokes VS: 8855 VS/T: 2.7237772992925255 --
 -------------------------------------
-	tmaf : 75
-	comments : 29
-	tellmeafact : 29
-	amp : 27
-	nbsp : 23
-	people : 22
-	score : 20
-	time : 19
-	best : 17
-	edit : 17
--------------------------------------
--- explainlikeimfive VS: 6931 VS/T: 2.5708456973293767 --
--------------------------------------
-	eli5 : 341
-	people : 99
-	edit : 94
-	time : 91
-	work : 67
-	see : 64
-	voice : 62
-	really : 61
-	take : 58
-	much : 57
--------------------------------------
--- jokes VS: 8051 VS/T: 2.476468778837281 --
--------------------------------------
-	norman : 407
-	said : 194
-	man : 151
-	says : 146
-	time : 146
-	day : 135
-	back : 129
-	really : 118
-	well : 109
-	home : 98
--------------------------------------
--- poetry VS: 15 VS/T: 0.01267962806424345 --
--------------------------------------
-	hang : 1
-	beak : 1
-	buy : 1
-	comes : 1
-	purchase : 1
-	house : 1
-	onto : 1
-	long : 1
-	general : 1
-	naturally : 1
+	norman : 500
+	said : 309
+	says : 280
+	man : 245
+	time : 239
+	day : 209
+	back : 202
+	good : 165
+	really : 165
+	little : 158

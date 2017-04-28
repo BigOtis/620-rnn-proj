@@ -10,7 +10,7 @@ import reddit.mongo.MongoFacade;
 
 public class LoadTorchText {
 	
-	private static final String fn = "sample_500k_9.txt";
+	private static final String fn = "samples_westworld.txt";
 	
 	public static void main(String[] args) throws IOException{
 		
@@ -26,7 +26,17 @@ public class LoadTorchText {
 				mongo.torch_threads.insertOne(doc);
 			}
 			catch(Exception e){
-				System.out.println("Invalid JSON line: " + num);
+				System.out.println("Attemtping repair...");
+				try{
+					Document doc = Document.parse(line + "\"}");
+					doc.append("posted", false);
+					doc.append("fixed", true);
+					mongo.torch_threads.insertOne(doc);
+				}
+				catch(Exception e2){
+					System.out.println("Invalid JSON line: " + num);
+				}
+				
 			}
 			num++;
 		}
