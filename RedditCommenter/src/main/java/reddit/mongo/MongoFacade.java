@@ -3,7 +3,6 @@ package reddit.mongo;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.List;
 
 import org.bson.Document;
 
@@ -11,11 +10,15 @@ import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
-import ga.dryco.redditjerk.api.enums.Sorting;
 import ga.dryco.redditjerk.wrappers.Comment;
 import ga.dryco.redditjerk.wrappers.Link;
-import ga.dryco.redditjerk.wrappers.RedditThread;
 
+/**
+ * Singleton class used to wrap the MongoDatabase object
+ * for use specific to the RedditDB
+ * 
+ * @author Phillip Lopez - pgl5711@rit.edu
+ */
 public class MongoFacade {
 
 	
@@ -94,11 +97,11 @@ public class MongoFacade {
 	 * Adds the given thread to our MongoDB
 	 * @param link
 	 */
-	public void addThread(Link link, String subreddit){
+	public boolean addThread(Link link, String subreddit){
 		
 		String threadID = link.getId();
 		if(threadExists(threadID)){
-			return;
+			return false;
 		}
 		
 		String threadTitle = link.getTitle();
@@ -123,7 +126,7 @@ public class MongoFacade {
 				.append("numComments", numComments);	
 		
 		threads.insertOne(threadDoc);
-		
+		return true;
 	}
 	
 	public boolean threadExists(String id){

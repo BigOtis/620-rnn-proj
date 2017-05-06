@@ -9,6 +9,13 @@ import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+/**
+ * Simple script that removes empty 
+ * and null comments from the MongoDB
+ * 
+ * @author Phillip Lopez - pgl5711@rit.edu
+ *
+ */
 public class CleanNulls {
 
 	// Setup mongodb connection

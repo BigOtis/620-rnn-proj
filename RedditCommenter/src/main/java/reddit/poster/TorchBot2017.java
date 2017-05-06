@@ -10,6 +10,10 @@ import ga.dryco.redditjerk.wrappers.Link;
 import ga.dryco.redditjerk.wrappers.User;
 import reddit.mongo.MongoFacade;
 
+/**
+ * A simple bot that posts generated threads on various subreddits
+ * @author Phil Lopez - PGL5711@rit.edu
+ */
 public class TorchBot2017 {
 
 	public static void main(String args[]){
@@ -19,13 +23,15 @@ public class TorchBot2017 {
 		Random r = new Random();
 		
 		// get a random thread
-		Document thread = mongo.torch_threads.find().limit(-1).skip(r.nextInt(size)).first();
+		Document thread = mongo.torch_threads.find(
+				new Document("subreddit","lifeofnorman"))
+				.limit(-1).skip(r.nextInt(size)).first();
 		
 		// API is broken for authentication ...
 		Reddit red = RedditApi.getRedditInstance("Otis Test");
 	    //User user = red.login("torchbot2017", "gibatad", "5WRAIQAXlszYGA", "r0UlUU295NTuZxQ6j3UTSnpj4u8");
-	    User user = red.login("barrybonds10", "barrybonds10", "paM3qk8nzuPu7g", "cdZbFFM_tpnyeC3eL36KPmVcLMU");
-
+	    //User user = red.login("barrybonds10", "barrybonds10", "paM3qk8nzuPu7g", "cdZbFFM_tpnyeC3eL36KPmVcLMU");
+	    User user = red.login("garrynewell", "garrynewell", "oJ9RtEvqymspCw", "cdd6FgWpiHka5W7DBfL-of_Qopw");
 	    
 	    String title = thread.getString("title");
 	    
@@ -46,12 +52,12 @@ public class TorchBot2017 {
 	    		return;
 	    	}
 	    }
-	    if(subreddit.equals("lifeofnorman")){
-	    	System.out.println("Skipping life of norman for now...");
+	    if(!subreddit.equals("lifeofnorman")){
+	    	System.out.println("Skipping not life of norman for now...");
 	    	return;
 	    }
 	    if(subreddit.equals("Poetry")){
-	    	title += "[General]";
+	    	subreddit = "ocpoetry";
 	    }
 
 	    System.out.println("Torchbot posting new thread:\n"

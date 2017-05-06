@@ -8,6 +8,13 @@ import org.bson.Document;
 
 import reddit.mongo.MongoFacade;
 
+/**
+ * Loads in JSON files that would have been generated
+ * by the Torch RNN model. If there is a problem with the JSON
+ * we make an attempt to fix it. Otherwise, we skip the line
+ * @author Phillip Lopez - pgl5711@rit.edu
+ *
+ */
 public class LoadTorchText {
 	
 	private static final String fn = "samples_westworld.txt";

@@ -16,7 +16,7 @@ import reddit.mongo.MongoFacade;
 
 /**
  * Loads a random new reddit thread and loads it into a file
- * @author pgl57
+ * @author Phillip Lopez - pgl5711@rit.edu
  *
  */
 public class GetRedditThread {

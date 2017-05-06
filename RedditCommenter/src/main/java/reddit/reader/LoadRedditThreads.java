@@ -25,10 +25,13 @@ public class LoadRedditThreads {
 	static String[] subredStrings = new String[]{//"westworld", "roastme", "funny",
 												//"lifeofnorman","politicaldiscussion","tellmeafact",
 												 //"jokes","todayilearned", "Poetry",
-												 "ShittyPoetry",
-												 "AskReddit","LifeProTips","Showerthoughts",
-												 "explainlikeimfive","WritingPrompts","askscience",
-												 "VoiceActing","history","tifu","TwoXChromosomes",
+//												 "ShittyPoetry",
+//												 "AskReddit","LifeProTips","Showerthoughts",
+//												 "explainlikeimfive","WritingPrompts","askscience",
+//												 "VoiceActing","history",
+												"tifu","TwoXChromosomes",
+												 //"OCPoetry","personalfinance","WritingPrompts"
+												 
 												 };	
 	
 	static boolean threadsOnly = false;

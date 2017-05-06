@@ -8,6 +8,12 @@ import ga.dryco.redditjerk.wrappers.Link;
 import ga.dryco.redditjerk.wrappers.User;
 import reddit.mongo.MongoFacade;
 
+/**
+ * Simple class used to post specific threads quickly 
+ * based on their titles. Not meant for production use.
+ * @author Phillip Lopez - pgl5711@rit.edu
+ *
+ */
 public class TorchPost {
 
 	public static void main(String args[]){
